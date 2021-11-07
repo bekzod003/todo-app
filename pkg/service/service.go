@@ -2,7 +2,7 @@ package service
 
 import "todo-app/pkg/repository"
 
-type Authorithation interface {
+type Authorization interface {
 }
 
 type TodoList interface {
@@ -12,7 +12,7 @@ type TodoItem interface {
 }
 
 type Service struct {
-	Authorithation
+	Authorization
 	TodoList
 	TodoItem
 }
