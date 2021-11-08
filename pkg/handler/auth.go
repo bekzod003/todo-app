@@ -18,6 +18,7 @@ func (h *Handler) sighUp(c *gin.Context) {
 	id, err := h.services.CreateUser(input)
 	if err != nil {
 		NewErrorResponse(c, http.StatusBadRequest, err.Error())
+		return
 	}
 
 	c.JSON(http.StatusOK, map[string]interface{}{
